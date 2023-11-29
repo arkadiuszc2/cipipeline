@@ -73,6 +73,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
+          image: arkadiuszc2/cipipeline-app
           context: .
           file: Dockerfile
           push: true
