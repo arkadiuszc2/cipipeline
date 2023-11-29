@@ -51,7 +51,7 @@ jobs:
 
   deploy-dev:
     runs-on: ubuntu-latest
-    needs: build_test
+    needs: upload_artifact
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -69,10 +69,6 @@ jobs:
         with:
           name: Package
           path: artifacts
-
-      - name: Directory listing
-        run: |
-          ls -la artifacts
 
       - name: Build and push
         uses: docker/build-push-action@v2
