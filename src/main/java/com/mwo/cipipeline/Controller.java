@@ -13,6 +13,11 @@ public class Controller {
 
   @GetMapping("/welcome")
   public String welcome(){
-    return "Welcome to the website with version" + appVersion + "!";
+    return "Welcome to the website with version!";
+  }
+
+  @GetMapping("/version")
+  public String version(){
+    return "Application version: " + appVersion;
   }
 }
