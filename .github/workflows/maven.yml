@@ -26,9 +26,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
+      - name: Fetch tags
+        run: git fetch --tags
+
       - name: Update version in pom.xml
         run: |
-          git fetch --tags
           latest_tag=$(git describe --tags --abbrev=0)
           mvn versions:set -DnewVersion=${latest_tag}
 
