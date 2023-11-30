@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class CIpipelineApplicationTests {
 
   @Test
-  void test() {
+  void test1() {
     assert true;
   }
 
