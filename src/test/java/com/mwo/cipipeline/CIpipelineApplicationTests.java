@@ -8,7 +8,7 @@ class CIpipelineApplicationTests {
 
   @Test
   void test() {
-    assert true;
+    assert false;
   }
 
 }
