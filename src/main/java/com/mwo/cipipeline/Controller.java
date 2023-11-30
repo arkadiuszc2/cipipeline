@@ -13,7 +13,7 @@ public class Controller {
 
   @GetMapping("/welcome")
   public String welcome(){
-    return "Welcome to the website with version!";
+    return "Welcome to the website!";
   }
 
   @GetMapping("/version")
