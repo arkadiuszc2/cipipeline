@@ -31,7 +31,7 @@ jobs:
 
       - name: Update version in pom.xml
         run: |
-          latest_tag=$(git describe --tags --abbrev=0)
+          latest_tag=$(git tag --sort=committerdate | tail -n1)
           mvn versions:set -DnewVersion=${latest_tag}
 
       - name: Build with Maven
